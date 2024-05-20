@@ -1,0 +1,7 @@
+git status
+git add
+git status
+git commit -m "mensaje"
+git push
+
+leer presentacion ciclos.pdf
