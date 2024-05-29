@@ -26,6 +26,7 @@ botonesColores[0].addEventListener('click', pintarCaja);
 botonesColores[0].addEventListener('click', pintarCaja); 
  */
 
+
 //Mover circulo
 //VARIABLES
 const pelota=document.querySelector('#circulo');
