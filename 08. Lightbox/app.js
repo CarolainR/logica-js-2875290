@@ -11,18 +11,31 @@ const imgPrincipal=document.querySelector ('#imgprincipal');
 function lightbox (e){
     //console.log (e.target.src)
     let currentImg = e.target.src;
-    flotante.computedStyleMap.top = '0vh';
-    flotante.computedStyleMap.transitionDuration = '.5s';
+    flotante.style.top = '0vh';
+    flotante.style.transitionDuration = '.5s';
     imgPrincipal.setAttribute('src',currentImg);
-}function cerrar (){
+}
+function cerrar (){
     flotante.style.top = '-100vh';
     flotante.style.transitionDuration = '.5s'
 
 }
+function anterior (){
+    imgPrincipal.src= 'img1.jpg'
+}
+function siguiente (){
+    imgPrincipal.src='img2.jpg'
+    imgPrincipal.setAttribute ('src','img2.jpg')
+}
+function cambiar (){
+    const atributo=this.getattribut('#fat')
+}
 
 //3.eventos
-btnNumeros [0] .addEventListener ('click',lightbox);
-btnNumeros [1] .addEventListener ('click',lightbox);
+btnNumeros [0].addEventListener ('click',lightbox);
+btnNumeros [1].addEventListener ('click',lightbox);
 equis.addEventListener ('click',cerrar)
 cuadroOpacidad.addEventListener('click',cerrar)
+btnAnterior.addEventListener ('click',anterior)
+btnSiguiente.addEventListener ('click',siguiente)
 // no entiendo por que no me funciona :( pero ya se habia terminado la clase ¿puedo mañana corregirlo contigo?? o me haces retroalimentacion por correo?
