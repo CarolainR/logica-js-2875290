@@ -1,26 +1,24 @@
-const meInput= document.getElementById("Boton");
-function cambiarValue (){
-    console.log (meInput.value)
-    meInput.Value='Lanzamiento Exitoso!✨' //PARA EMOJIS WINDOW Y . (TECLAS)
-}
-//03. Eventos
-meInput.addEventListener('click', cambiarValue)
+/* //Hacer un contador con un boton menos y un mas, debe de tener: condicionales, 2 funciones, 4 variables, inner text y ++. 
+Contador que incremente solo hasta 20.No puede mostrar numeros por debajo del 0 */
+//1. variables
+const numero= document.getElementById ('pantalla');
+const menos= document.getElementById ('menos');
+const mas= document.getElementById ('mas');
+let i=0;
 
-//EJERCICIO DEL CUADRO DE COLORES
-//Variables
-const cajaColor= document.getElementById('caja');
-const botonesColores =document.querySelectorAll ('.btnColores');
-
-console.log (cajaColor)
-console.log (botonesColores)
-//funciones
-function pintarCaja (e){
-    console.log (e.target.getAttribute ('data-color'))
-    let newColor = e.target.getAttribute ('data-color')
-    cajaColor.style.backgroundColor= 'orange';
+//2. Funciones
+function incrementar (){
+    if(i<20){
+        i++;
+        numero.innerText = i;
+    }
 }
-//EVENTOS
-botonesColores[0].addEventListener('click', pintarCaja);
-botonesColores[0].addEventListener('click', pintarCaja); //alt + shift + tecla abajo para copiar
-botonesColores[0].addEventListener('click', pintarCaja); 
-botonesColores[0].addEventListener('click', pintarCaja); 
+function decrementar (){
+    if (i>0){
+        i--;
+        numero.innerText = i;
+    }
+}
+//3. Llasmado y eventos
+mas.addEventListener('click', incrementar);
+menos.addEventListener('click', decrementar);
